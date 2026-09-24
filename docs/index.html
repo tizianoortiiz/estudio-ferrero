@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ferrero &amp; Asociados | Estudio jurídico y contable</title>
+<meta name="description" content="Asesoramiento jurídico, tributario y contable para empresas. Más de veinte años de práctica profesional en Buenos Aires.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#f6f7f9;--white:#fff;--ink:#0d1b2e;--slate:#46536a;--rule:#d3d9e2;--bordo:#7b1e2d;--bordo-d:#5e1622;--err:#a3212f;
+--serif:'Newsreader',Georgia,serif;--sans:'IBM Plex Sans',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font:400 1rem/1.65 var(--sans);color:var(--ink);background:var(--paper)}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--bordo);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.15;letter-spacing:-.01em}
+h2{font-size:clamp(1.9rem,3.4vw,2.6rem);margin-bottom:.6rem}
+.lead{color:var(--slate);max-width:60ch}
+section{padding:88px 0}
+
+header{background:var(--ink);color:#fff;position:sticky;top:0;z-index:10}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{font-family:var(--serif);font-size:1.3rem;text-decoration:none;font-weight:500}
+.brand span{color:#c9a3aa}
+nav{display:flex;gap:28px;align-items:center}
+nav a{font-size:.92rem;text-decoration:none;color:#cfd6e2}
+nav a:hover{color:#fff}
+.btn{display:inline-block;background:var(--bordo);color:#fff;border:0;padding:13px 26px;font:500 .95rem var(--sans);text-decoration:none;cursor:pointer;transition:background .2s}
+.btn:hover{background:var(--bordo-d)}
+.btn:disabled{opacity:.6;cursor:wait}
+nav .btn{padding:9px 18px;color:#fff}
+
+.hero{background:var(--ink);color:#fff;padding:96px 0 0}
+.hero .grid{display:grid;grid-template-columns:1.5fr 1fr;gap:64px;align-items:end}
+.hero h1{font-size:clamp(2.5rem,5.6vw,4.4rem);font-weight:400;max-width:15ch}
+.hero p{color:#b8c2d3;max-width:52ch;margin:24px 0 36px;font-size:1.08rem}
+.hero .actions{display:flex;gap:24px;align-items:center;padding-bottom:72px;flex-wrap:wrap}
+.hero .actions a.t{color:#e4e9f1;text-underline-offset:5px}
+.ficha{border-left:1px solid #2b3c57;padding:0 0 72px 32px;font-size:.95rem;color:#b8c2d3}
+.ficha dt{font-family:var(--serif);font-size:1.2rem;color:#fff;margin-top:20px}
+.ficha dt:first-child{margin-top:0}
+.ficha dd{margin:2px 0 0}
+.banda{border-top:1px solid #2b3c57;background:#0a1626}
+.banda .wrap{display:flex;gap:48px;padding-top:20px;padding-bottom:20px;color:#93a1b8;font-size:.88rem;flex-wrap:wrap}
+
+.areas{margin-top:48px;border-top:2px solid var(--ink)}
+.area{display:grid;grid-template-columns:260px 1fr 220px;gap:32px;padding:28px 0;border-bottom:1px solid var(--rule)}
+.area h3{font-size:1.45rem}
+.area p{color:var(--slate)}
+.area small{color:var(--slate);font-size:.88rem;border-left:2px solid var(--bordo);padding-left:14px;align-self:start}
+
+.casos{background:var(--white);border-block:1px solid var(--rule)}
+.casos-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0;margin-top:48px;border:1px solid var(--rule)}
+.caso{padding:36px;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.caso:nth-child(2n){border-right:0}.caso:nth-last-child(-n+2){border-bottom:0}
+.caso .res{font-family:var(--serif);font-size:2.3rem;color:var(--bordo);line-height:1.1}
+.caso h3{font-size:1.2rem;margin:10px 0 8px}
+.caso p{color:var(--slate);font-size:.95rem}
+.nota{margin-top:16px;font-size:.82rem;color:var(--slate)}
+
+.contacto .grid{display:grid;grid-template-columns:1fr 1.25fr;gap:72px}
+.contacto ul{list-style:none;padding:0;margin-top:28px;color:var(--slate)}
+.contacto li{padding:12px 0;border-top:1px solid var(--rule)}
+.contacto li strong{display:block;color:var(--ink);font-weight:600}
+form{background:var(--white);border:1px solid var(--rule);border-top:3px solid var(--bordo);padding:36px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:0 20px}
+.f{margin-bottom:20px}
+label{display:block;font-weight:500;font-size:.9rem;margin-bottom:6px}
+input,select,textarea{width:100%;font:inherit;padding:11px 12px;border:1px solid #aab3c2;background:#fff;color:var(--ink);border-radius:0}
+textarea{min-height:130px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--bordo);outline-offset:0;border-color:var(--bordo)}
+.f.bad input,.f.bad select,.f.bad textarea{border-color:var(--err);background:#fdf6f6}
+.err{color:var(--err);font-size:.84rem;margin-top:5px;min-height:0}
+.hint{color:var(--slate);font-size:.82rem;margin-top:5px;display:flex;justify-content:space-between}
+.check{display:flex;gap:10px;align-items:flex-start;font-size:.88rem;color:var(--slate)}
+.check input{width:auto;margin-top:4px}
+.check label{font-weight:400;margin:0}
+.hp{position:absolute;left:-9999px;height:0;overflow:hidden}
+.estado{margin-top:16px;font-size:.92rem}
+.ok{background:var(--white);border:1px solid var(--rule);border-top:3px solid var(--ink);padding:40px}
+.ok h3{font-size:1.7rem;margin-bottom:10px}
+.ok code{font:600 1rem var(--sans);background:var(--paper);padding:3px 8px;border:1px solid var(--rule)}
+
+footer{background:var(--ink);color:#93a1b8;padding:40px 0;font-size:.86rem}
+footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+
+@media (max-width:860px){
+ nav a:not(.btn){display:none}
+ .hero .grid,.contacto .grid{grid-template-columns:1fr;gap:40px}
+ .ficha{border-left:0;border-top:1px solid #2b3c57;padding:28px 0 56px}
+ .area{grid-template-columns:1fr;gap:10px}
+ .casos-grid{grid-template-columns:1fr}
+ .caso{border-right:0!important;border-bottom:1px solid var(--rule)!important}.caso:last-child{border-bottom:0!important}
+ .row{grid-template-columns:1fr}
+ section{padding:64px 0}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+<header>
+ <div class="wrap">
+  <a class="brand" href="#inicio">Ferrero <span>&amp;</span> Asociados</a>
+  <nav aria-label="Principal">
+   <a href="#areas">Áreas de práctica</a>
+   <a href="#casos">Casos</a>
+   <a href="#consulta" class="btn">Solicitar consulta</a>
+  </nav>
+ </div>
+</header>
+
+<main id="inicio">
+ <div class="hero">
+  <div class="wrap grid">
+   <div>
+    <h1>Criterio jurídico y rigor contable para decisiones empresarias.</h1>
+    <p>Asesoramos a sociedades, grupos económicos y entidades del exterior en materia societaria, tributaria, laboral y contable, con equipos que trabajan de forma coordinada.</p>
+    <div class="actions">
+      <a class="btn" href="#consulta">Solicitar consulta inicial</a>
+      <a class="t" href="#areas">Ver áreas de práctica</a>
+    </div>
+   </div>
+   <dl class="ficha">
+    <dt>Fundado en 2003</dt><dd>Estudio independiente, sede en Microcentro, CABA.</dd>
+    <dt>Abogados y contadores públicos</dt><dd>Matriculados en CPACF y CPCECABA.</dd>
+    <dt>Clientes en 9 países</dt><dd>Atención en español, inglés y portugués.</dd>
+   </dl>
+  </div>
+  <div class="banda"><div class="wrap"><span>Confidencialidad profesional</span><span>Honorarios acordados por escrito</span><span>Respuesta a consultas en 24 horas hábiles</span></div></div>
+ </div>
+
+ <section id="areas">
+  <div class="wrap">
+   <h2>Áreas de práctica</h2>
+   <p class="lead">Cada asunto lo lleva un socio responsable, con el apoyo del área que corresponda.</p>
+   <div class="areas">
+    <article class="area"><h3>Derecho societario</h3><p>Constitución de sociedades, reorganizaciones, fusiones y escisiones, acuerdos de accionistas y gobierno corporativo.</p><small>Sociedades, holdings y filiales de empresas extranjeras</small></article>
+    <article class="area"><h3>Asesoramiento tributario</h3><p>Planificación fiscal, determinaciones de oficio, inspecciones de ARCA y ARBA, defensa ante el Tribunal Fiscal de la Nación.</p><small>Empresas con operaciones complejas o en inspección</small></article>
+    <article class="area"><h3>Derecho laboral</h3><p>Relaciones colectivas e individuales, reestructuraciones de personal, auditorías de cumplimiento y conflictos judiciales.</p><small>Empleadores con más de 50 trabajadores</small></article>
+    <article class="area"><h3>Contabilidad y auditoría</h3><p>Estados contables, informes de auditoría, liquidación de impuestos, sindicatura societaria y due diligence.</p><small>Sociedades por acciones y grupos consolidados</small></article>
+    <article class="area"><h3>Contratos comerciales</h3><p>Redacción y negociación de contratos de distribución, suministro, franquicia, servicios y financiamiento.</p><small>Operaciones nacionales y transfronterizas</small></article>
+    <article class="area"><h3>Litigios y arbitraje</h3><p>Representación en procesos comerciales y ejecutivos, concursos y quiebras, y arbitrajes institucionales.</p><small>Disputas de alto monto y controversias entre socios</small></article>
+   </div>
+  </div>
+ </section>
+
+ <section id="casos" class="casos">
+  <div class="wrap">
+   <h2>Casos representativos</h2>
+   <p class="lead">Una muestra de asuntos recientes. Los nombres de los clientes se reservan por confidencialidad.</p>
+   <div class="casos-grid">
+    <article class="caso"><div class="res">USD 18 M</div><h3>Adquisición de una empresa agroindustrial</h3><p>Due diligence legal, contable e impositivo y estructuración de la compra para un fondo regional.</p></article>
+    <article class="caso"><div class="res">Ajuste anulado</div><h3>Determinación de oficio por $ 2.400 M</h3><p>Revocación total ante el Tribunal Fiscal de la Nación en favor de un exportador de servicios.</p></article>
+    <article class="caso"><div class="res">14 meses</div><h3>Reorganización de un grupo de 11 sociedades</h3><p>Fusión y escisión con continuidad operativa y sin contingencias tributarias posteriores.</p></article>
+    <article class="caso"><div class="res">Acuerdo a 90 días</div><h3>Conflicto entre socios en empresa familiar</h3><p>Salida ordenada de un socio mediante arbitraje y valuación independiente de las participaciones.</p></article>
+   </div>
+   <p class="nota">Los resultados pasados no garantizan resultados futuros. Casos de ejemplo: reemplácelos por los reales del estudio.</p>
+  </div>
+ </section>
+
+ <section id="consulta" class="contacto">
+  <div class="wrap grid">
+   <div>
+    <h2>Solicite una consulta inicial</h2>
+    <p class="lead">Cuéntenos el asunto. Un socio revisará su consulta y le responderá dentro de las 24 horas hábiles. La primera reunión no tiene costo.</p>
+    <ul>
+     <li><strong>Dirección</strong>Av. Leandro N. Alem 1050, piso 8, CABA</li>
+     <li><strong>Teléfono</strong>+54 11 4000-0000</li>
+     <li><strong>Correo</strong>contacto@ferreroasociados.com.ar</li>
+     <li><strong>Horario</strong>Lunes a viernes, de 9 a 18 h</li>
+    </ul>
+   </div>
+
+   <div id="panel">
+   <form id="form" novalidate>
+    <div class="row">
+     <div class="f"><label for="nombre">Nombre y apellido</label><input id="nombre" name="nombre" autocomplete="name" maxlength="100" required><div class="err" id="e-nombre" role="alert"></div></div>
+     <div class="f"><label for="email">Correo electrónico</label><input id="email" name="email" type="email" autocomplete="email" maxlength="120" required><div class="err" id="e-email" role="alert"></div></div>
+    </div>
+    <div class="row">
+     <div class="f"><label for="telefono">Teléfono</label><input id="telefono" name="telefono" type="tel" autocomplete="tel" placeholder="+54 11 0000-0000" maxlength="30" required><div class="err" id="e-telefono" role="alert"></div></div>
+     <div class="f"><label for="empresa">Razón social</label><input id="empresa" name="empresa" autocomplete="organization" maxlength="120" required><div class="err" id="e-empresa" role="alert"></div></div>
+    </div>
+    <div class="row">
+     <div class="f"><label for="cuit">CUIT</label><input id="cuit" name="cuit" inputmode="numeric" placeholder="30-12345678-9" maxlength="13" required><div class="err" id="e-cuit" role="alert"></div></div>
+     <div class="f"><label for="area">Área de la consulta</label>
+      <select id="area" name="area" required><option value="">Seleccione</option><option value="societario">Derecho societario</option><option value="tributario">Asesoramiento tributario</option><option value="laboral">Derecho laboral</option><option value="contable">Contabilidad y auditoría</option><option value="contratos">Contratos comerciales</option><option value="litigios">Litigios y arbitraje</option></select><div class="err" id="e-area" role="alert"></div></div>
+    </div>
+    <div class="f"><label for="mensaje">Descripción del asunto</label><textarea id="mensaje" name="mensaje" maxlength="2000" required></textarea>
+     <div class="hint"><span>No incluya información sujeta a secreto o documentación sensible.</span><span id="cnt">0 / 2000</span></div><div class="err" id="e-mensaje" role="alert"></div></div>
+    <div class="hp" aria-hidden="true"><label for="web">No completar</label><input id="web" name="web" tabindex="-1" autocomplete="off"></div>
+    <div class="f"><div class="check"><input type="checkbox" id="consentimiento" name="consentimiento"><label for="consentimiento">Acepto que el estudio trate mis datos personales para responder esta consulta, conforme a la Ley 25.326.</label></div><div class="err" id="e-consentimiento" role="alert"></div></div>
+    <button class="btn" type="submit" id="enviar">Enviar consulta</button>
+    <div class="estado" id="estado" role="status"></div>
+   </form>
+   </div>
+  </div>
+ </section>
+</main>
+
+<footer><div class="wrap"><span>© 2026 Ferrero &amp; Asociados. Todos los derechos reservados.</span><span>Información de carácter general, no constituye asesoramiento profesional.</span></div></footer>
+<script src="app.js"></script>
+</body>
+</html>
